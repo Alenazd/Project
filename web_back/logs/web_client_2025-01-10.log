@@ -1,0 +1,8 @@
+2025-01-10 08:39:58,495 - web_client - INFO - Database initialized successfully
+2025-01-10 08:39:58,536 - web_client - INFO - Database initialized successfully
+2025-01-10 08:39:58,825 - web_client - INFO - Database initialized successfully
+2025-01-10 08:49:04,856 - web_client - INFO - Incoming request: GET /auth/login from 127.0.0.1
+2025-01-10 08:49:05,185 - web_client - INFO - Incoming request: GET /auth/yandex/login from 127.0.0.1
+2025-01-10 08:50:51,397 - web_client - INFO - Incoming request: GET /auth/login from 127.0.0.1
+2025-01-10 08:50:51,707 - web_client - INFO - Incoming request: GET /auth/yandex/login from 127.0.0.1
+2025-01-10 08:56:36,839 - web_client - INFO - Database initialized successfully

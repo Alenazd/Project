@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milligramm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2><img src="logo.png" alt="Logo" width="140" height="120" />Milligramm</h2>
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="Tests.html">Tests</a>
+            <a href="Account.html">Account</a>
+            <button class="btnLogin-popup">Login</button>
+            <button class="btnlogout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <div class="section section1">
+        <div class="container welcome">
+            <h1>Добро пожаловать на Milligramm!</h1>
+            <p>Здесь вы можете пройти тесты, получить полезную информацию и связаться с нами.</p>
+        </div>
+    </div>
+
+    <div class="section section2">
+        <div class="text-box">
+            <h2>Для студентов:</h2>
+            <p> Прохождение тестов:  Студенты могут проходить тесты в удобное для них время, что позволяет им учиться в своем темпе.</p>
+            <p> Обратная связь:  После завершения теста студенты получают мгновенную обратную связь, что помогает им понять свои сильные и слабые стороны.</p>
+            <p> Доступ к материалам:  Студенты могут получать доступ к дополнительным учебным материалам и ресурсам, связанным с тестами, что способствует более глубокому пониманию темы.</p>
+        </div>
+        <div class="text-box">
+            <h2>Для преподавателей:</h2>
+            <p> Создание тестов:  Преподаватели могут легко создавать тесты с различными типами вопросов, включая множественный выбор, открытые вопросы и шкалы оценок.</p>
+            <p> Анализ результатов:  После завершения тестирования преподаватели могут просматривать детализированные отчеты о результатах, что помогает в оценке знаний студентов и выявлении областей, требующих дополнительного внимания.</p>
+            <p> Управление тестами:  Преподаватели могут редактировать, удалять и обновлять тесты в любое время, что обеспечивает гибкость в процессе обучения.</p>
+        </div>
+    </div>
+
+        <div class="preim">
+            <h2> Преимущества нашего сервиса:</h2>
+            <p> Удобный интерфейс: Наш сайт предлагает интуитивно понятный интерфейс, который делает процесс создания и прохождения тестов простым и доступным для всех пользователей.</p>
+            <p> Безопасность данных: Мы гарантируем безопасность и конфиденциальность данных пользователей, что позволяет сосредоточиться на обучении без лишних забот.</p>
+            <p> Поддержка пользователей: Наша команда поддержки всегда готова помочь с любыми вопросами или проблемами, связанными с использованием платформы.</p>
+        </div>
+
+    
+        <div class="wrapper" id="popup">
+            <span class="icon-close" id="close-popup">✖</span>
+            </span>
+            
+            <div class="form-box login">
+                <div class="form">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <button type="button" class="btn" onclick="window.open('https://oauth.yandex.ru/authorize?client_id=', '_blank')">Yandex</button>
+                        <button type="button" class="btn" onclick="window.open('https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID', '_blank')">GitHub</button>
+                        <button type="button" class="btn" onclick="window.location.href='code.html'">Code</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

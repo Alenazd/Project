@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milligramm</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+<header>
+    <h2>
+        <img src="logo.png" alt="Logo" width="140" height="120" />
+        Milligramm
+    </h2>
+    <nav class="navigation">
+        <a href="Home.html">Home</a>
+        <a href="Tests.html">Tests</a>
+        <a href="Account.html">Account</a>
+        <button class="btnLogin-popup">Login</button>
+    </nav>
+</header>
+<div class="section">
+    <div class="container welcome">
+        <h1>Добро пожаловать во вкладку тесты!</h1>
+        <p>Здесь вы можете пройти тесты, а также создавать, изменять и удалять их.</p>
+    </div>
+</div>
+<nav class="action">
+    <button class="btnaction" id="addTestBtn">Add Test</button>
+    <button class="btnaction" id="editTestBtn">Edit Test</button>
+    <button class="btnaction" id="myTestsBtn">My Tests</button>
+    <button class="btnaction" id="searchTestsBtn">Search Tests</button> <!-- Кнопка для поиска тестов -->
+</nav>
+
+<!-- Popup добавления теста -->
+<div class="popup" id="addTestPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-add-popup">✖</span>
+        <h2>Добавить тест</h2>
+        <p>Заполните данные теста</p>
+        <form id="addTestForm">
+            <input type="text" id="testTitle" placeholder="Название теста" required>
+            <div id="questionsContainer"></div>
+            <button type="button" id="addQuestionBtn">Добавить вопрос</button>
+            <button type="submit" id="SaveTest">Сохранить тест</button>
+        </form>
+    </div>
+</div>
+
+<!-- Popup редактирования теста -->
+<div class="popup" id="editTestPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-edit-popup">✖</span>
+        <h2>Редактировать тест</h2>
+        <select id="testSelect" onchange="loadTest()">
+            <option value="">Выберите тест</option>
+        </select>
+        <div id="editQuestionsContainer"></div>
+        <button type="button" id="addEditQuestionBtn">Добавить вопрос</button>
+        <button type="button" id="saveEditTestBtn">Сохранить изменения</button>
+    </div>
+</div>
+
+<!-- Popup для "Мои Тесты" -->
+<div class="popup" id="myTestsPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-my-tests-popup">✖</span>
+        <h2>Мои Тесты</h2>
+        <ul id="testList"></ul>
+    </div>
+</div>
+<!-- Popup для поиска тестов -->
+<div class="popup" id="searchTestsPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-search-tests-popup">✖</span>
+        <h2>Поиск тестов</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Поиск тестов...">
+            <button id="searchBtn">Поиск</button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup для отображения результатов поиска -->
+<div class="popup" id="searchResultsPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-search-results-popup">✖</span>
+        <h2>Результаты поиска</h2>
+        <ul id="searchResultsList"></ul>
+    </div>
+</div>
+<!-- Popup для прохождения теста -->
+<div class="popup" id="testPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-test-popup">✖</span>
+        <h2 id="testTitlePopup"></h2>
+        <div id="testQuestionsContainer"></div>
+        <button id="submitTestBtn">Сдать тест</button>
+    </div>
+</div>
+
+<!-- Popup для отображения результата теста -->
+<div class="popup" id="resultPopup" style="display: none;">
+    <div class="popup-content">
+        <span class="icon-close" id="close-result-popup">✖</span>
+        <h2>Результат теста</h2>
+        <p id="resultMessage"></p>
+    </div>
+</div>
+
+<div class="wrapper" id ="popup">
+    <span class="icon-close" id="close-popup">✖</span>
+    <div class="form-box login">
+        <div class="form">
+            <h2>Login</h2>
+            <form action="#">
+                <button type="button" class="btn" onclick="window.open('https://oauth.yandex.ru/authorize?client_id=', '_blank')">Yandex</button>
+                <button type="button" class="btn" onclick="window.open('https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID', '_blank')">GitHub</button>
+                <button type="button" class="btn" onclick="window.location.href='code.html'">Code</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="test.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

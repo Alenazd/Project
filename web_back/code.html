@@ -1,0 +1,30 @@
+<!-- code.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайный код</title>
+</head>
+<body>
+    <h1>Ваш случайный код:</h1>
+    <h2 id="random-code"></h2>
+
+    <button onclick="goHome()">Вернуться на главную</button>
+
+    <script>
+        // Генерация случайного 6-значного кода
+        function generateRandomCode() {
+            return Math.floor(100000 + Math.random() * 900000);
+        }
+
+        // Отображение кода на странице
+        document.getElementById('random-code').innerText = generateRandomCode();
+
+        // Функция для возврата на главную страницу
+        function goHome() {
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milligramm - Account</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <header>
+        <h2>
+            <img src="logo.png" alt="Logo" width="140" height="120" />
+            Milligramm
+        </h2>
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="Tests.html">Tests</a>
+            <a href="Account.html">Account</a>
+            <button class="btnLogin-popup">Login</button>
+            <button class="btnlogout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main class="account-container">
+        <div class="profile-section">
+            <div class="profile-header">
+                <img id="userAvatar" src="IMG_3532.jpg" alt="User Avatar" class="profile-avatar">
+                <div class="profile-info">
+                    <h1 id="userName">Loading...</h1>
+                    <p id="userEmail">Loading...</p>
+                    <p id="userNickname">Loading...</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button onclick="showAccountSettings()">Edit Profile</button>
+                <button onclick="showFindUsers()">Find Users</button>
+                <button onclick="logout(true)">Logout from All Devices</button>
+            </div>
+        </div>
+
+        <div class="activity-section">
+            <h2>Recent Activity</h2>
+            <div id="activityList" class="activity-list">
+                <!-- Activity items will be added here dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup для поиска пользователей -->
+    <div id="findUsersPopup" class="popup">
+        <div class="popup-content">
+            <span class="icon-close" onclick="closeFindUsers()">✖</span>
+            <h2>Find Users</h2>
+            <div class="search-box">
+                <input id="searchUserInput" type="text" placeholder="Enter nickname or email">
+                <button onclick="searchUsers()">Search</button>
+            </div>
+            <ul id="userResultsList" class="user-results"></ul>
+        </div>
+    </div>
+
+    <!-- Popup для настроек аккаунта -->
+    <div id="accountSettingsPopup" class="popup">
+        <div class="popup-content">
+            <span class="icon-close" onclick="closeAccountSettings()">✖</span>
+            <h2>Account Settings</h2>
+            <form id="accountSettingsForm" onsubmit="updateAccountSettings(event)">
+                <div class="form-group">
+                    <label for="newNickname">Nickname</label>
+                    <input type="text" id="newNickname" name="nickname" placeholder="Enter new nickname">
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>
